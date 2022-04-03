@@ -6,7 +6,7 @@
 <h1>Create new Post</h1>
 <div class="container mx-auto m-6 p-6">
    <div class="w-full max-w-xs">
-         <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="{{ route('store') }}" method="POST">
+         <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="{{ route('posts.store') }}" method="POST">
             @csrf
             <div class="mb-4">
                 <label class="block text-gray-600 text-sm font-semibold mb-2" for="title">

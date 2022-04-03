@@ -44,7 +44,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->save();
 
-        return redirect(route('index'));
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -89,7 +89,7 @@ class PostController extends Controller
         $post->body = $request->body;
         $post->save();
 
-        return redirect(route('index'));
+        return redirect(route('posts.index'));
     }
 
     /**
@@ -103,6 +103,6 @@ class PostController extends Controller
         $post = Post::findORFail($id);
         $post->delete();
 
-        return redirect(route('index'));
+        return redirect(route('posts.index'));
     }
 }

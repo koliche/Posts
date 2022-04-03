@@ -6,7 +6,7 @@
 <h1>Edit Post</h1>
 <div class="container mx-auto m-6 p-6">
    <div class="w-full max-w-xs">
-         <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="{{ route('update', $post->id) }}" method="POST">
+         <form class="bg-white rounded px-8 pt-6 pb-8 mb-4" action="{{ route('posts.update', $post->id) }}" method="POST">
             @csrf
             @method('PUT')
             <div class="mb-4">
@@ -46,7 +46,7 @@
                </button>
            </div>
          </form>
-         <form method="POST" action="{{ route('destroy', $post->id) }}">
+         <form method="POST" action="{{ route('posts.destroy', $post->id) }}">
             @csrf
             @method('DELETE')
             <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border border-blue-700 rounded">
